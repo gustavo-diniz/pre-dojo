@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>br.com.gustavodiniz.predojo</groupId>
+  <artifactId>rankingApp</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>rankingApp</name>
+  <description>Projeto simples de teste para analise de algoritimos de log de um jogo de primeira pessoa</description>
+  <developers>
+  	<developer>
+  		<name>Gustavo Diniz dos Santos</name>
+  		<email>gdinsantos1@gmail.com</email>
+  		<url>https://github.com/gustavo-diniz</url>
+  	</developer>
+  </developers>
+	
+  <build>
+    <plugins>
+	   <plugin>
+	   	  <configuration>
+	   	  	<finalName>rankinApp</finalName>
+	   	  </configuration>
+	      <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-shade-plugin</artifactId>
+	        <version>2.1</version>
+	        <executions>
+	          <execution>
+	            <phase>package</phase>
+	            <goals>
+	              <goal>shade</goal>
+	            </goals>
+	            <configuration>
+	              <transformers>
+	                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	                  <resource>META-INF/spring.handlers</resource>
+	                </transformer>
+	                <transformer implementation="org.apache.maven.plugins.shade.resource.AppendingTransformer">
+	                  <resource>META-INF/spring.schemas</resource>
+	                </transformer>
+	                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+	                  <mainClass>br.com.gustavodiniz.rankingApp.main.RankingAppMain</mainClass>
+	                </transformer>
+	              </transformers>
+	            </configuration>
+	          </execution>
+	        </executions>
+	      </plugin>
+	    </plugins>
+	  </build>
+</project>
