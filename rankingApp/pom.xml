@@ -12,6 +12,15 @@
   		<url>https://github.com/gustavo-diniz</url>
   	</developer>
   </developers>
+
+  <dependencies>
+  		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+			<scope>test</scope>
+		</dependency>
+  </dependencies>
 	
   <build>
     <plugins>
@@ -44,6 +53,14 @@
 	          </execution>
 	        </executions>
 	      </plugin>
+	      <plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
 	    </plugins>
 	  </build>
 </project>
