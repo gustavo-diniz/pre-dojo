@@ -1,11 +1,16 @@
 
 *** Projeto rankingApp
 
-juntamente com o fonte do projeto, existe o jar rankingApp.jar, responsável pelo calculo do log e exibição do ranking.
+Este é o projeto rankingApp referente ao teste DevAmil/pre-dojo, responsável pelo cálculo do log e exibição do ranking de jogadores.
 
-- Para executar o projeto rankingApp.jar
+Neste projeto, foi utilizado apenas Java8, Junit e maven
+
+após baixar o projeto e efetuar o seu build, na pasta target será gerado o arqquivo jar : rankingApp.jat
+- Para executar o projeto rankingApp.jar + o caminho do arquivo de log
  java -jar rankinkApp.jar caminhoDoArquivoDeLog.log
+
+OBS: dentro da pasta do projeto, existe um exemplo do arquivo de log, ao qual foram utilizados no meu teste.
 
 o resultado será impresso no seu console.
 
-Neste projeto, foi utilizado apenas Java8, Junit e maven. Sempre existirão técnicas e formas melhores para resolver qualquer problema, contudo, este foi feito da maneira mais simples possível para resolver a solução proposta.
+Sempre existirão técnicas e formas melhores para resolver qualquer problema, contudo, este foi feito da maneira mais simples possível para resolver a solução proposta.
